@@ -37,11 +37,19 @@ const EditProduct = () => {
         axios({
             method : "put",
             url : `http://localhost:9000/products/${ID}`,
+            // data : {
+            //     name,
+            //     price,
+            //     items
+            // }
+
             data : {
-                name,
-                price,
-                items
+                  id : ID,
+                  name,
+                  price,
+                  items
             }
+            
         }).then(()=>{
             navigate("/products");
 
